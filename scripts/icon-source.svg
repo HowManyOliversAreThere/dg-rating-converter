@@ -1,17 +1,12 @@
 <svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
   <rect width="512" height="512" rx="112" fill="#2f5233"/>
 
-  <ellipse cx="216" cy="300" rx="112" ry="26" fill="#182716" opacity="0.3"/>
+  <ellipse cx="216" cy="300" rx="112" ry="24" fill="#182716" opacity="0.3"/>
   <ellipse cx="210" cy="220" rx="112" ry="42" fill="#fdfbf3"/>
-  <ellipse cx="210" cy="220" rx="112" ry="42" fill="none" stroke="#d8cfa9" stroke-width="3" opacity="0.5"/>
-  <ellipse cx="210" cy="212" rx="62" ry="21" fill="none" stroke="#d8cfa9" stroke-width="3" opacity="0.55"/>
 
-  <circle cx="360" cy="316" r="56" fill="#4f7f8b"/>
-  <circle cx="360" cy="316" r="56" fill="none" stroke="#2f5233" stroke-width="7"/>
-  <g stroke="#fdfbf3" stroke-width="7" stroke-linecap="round" fill="none">
-    <path d="M 397.6 329.7 A 40.0 40.0 0 0 1 322.4 329.7"/>
-    <path d="M 322.4 302.3 A 40.0 40.0 0 0 1 397.6 302.3"/>
-  </g>
-  <polygon points="317.9,317.3 336.7,333.8 314.1,342.1" fill="#fdfbf3"/>
-  <polygon points="402.1,314.7 383.3,298.2 405.9,289.9" fill="#fdfbf3"/>
+  <circle cx="360" cy="316" r="76" fill="#4f7f8b" stroke="#2f5233" stroke-width="10"/>
+  <path
+    d="M 315 316 L 337 294 L 337 306 L 383 306 L 383 294 L 405 316 L 383 338 L 383 326 L 337 326 L 337 338 Z"
+    fill="#fdfbf3"
+  />
 </svg>

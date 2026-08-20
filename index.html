@@ -11,6 +11,16 @@
       content="Convert disc golf ratings between UDisc and PDGA using the community-derived regression formula, with layout-difficulty adjustments."
     />
     <title>Disc Golf Rating Converter</title>
+    <script>
+      (function () {
+        try {
+          var stored = localStorage.getItem('theme')
+          var theme =
+            stored || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light')
+          document.documentElement.dataset.theme = theme
+        } catch (e) {}
+      })()
+    </script>
   </head>
   <body>
     <div id="root"></div>

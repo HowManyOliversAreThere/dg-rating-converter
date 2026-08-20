@@ -1,7 +1,9 @@
 import { useMemo, useState } from 'react'
-import { ArrowLeftRight } from 'lucide-react'
+import { ArrowLeftRight, Code2 } from 'lucide-react'
 
 import { DiscIcon } from '@/components/DiscIcon'
+import { ExternalLink } from '@/components/ExternalLink'
+import { ThemeToggle } from '@/components/ThemeToggle'
 import { Button } from '@/components/ui/button'
 import { ToggleGroup, ToggleGroupItem } from '@/components/ui/toggle-group'
 import {
@@ -14,6 +16,7 @@ import {
 const FORMULA_ORDER: FormulaType[] = ['generic', 'short', 'long', 'ruleOfThumb']
 
 const REDDIT_POST_URL = 'https://redd.it/1vt0svx'
+const REPO_URL = 'https://github.com/HowManyOliversAreThere/dg-rating-converter'
 
 function formatRating(value: number) {
   return value.toLocaleString(undefined, {
@@ -51,21 +54,23 @@ function App() {
 
   return (
     <div className="flex min-h-dvh flex-col items-center justify-center gap-8 px-4 py-10">
+      <div className="fixed top-4 right-4">
+        <ThemeToggle />
+      </div>
+
       <header className="flex max-w-xs flex-col items-center gap-3 text-center">
-        <DiscIcon className="h-12 w-12" />
+        <DiscIcon className="h-16 w-16" />
         <h1 className="font-display text-3xl font-semibold tracking-tight text-foreground">
           DG Rating Converter
         </h1>
         <p className="text-sm text-muted-foreground">
-          Convert UDisc &harr; PDGA ratings using the regression formula from{' '}
-          <a
+          Approximately convert UDisc &harr; PDGA ratings using the regression formula from{' '}
+          <ExternalLink
             href={REDDIT_POST_URL}
-            target="_blank"
-            rel="noreferrer"
             className="font-medium text-foreground underline underline-offset-2 hover:text-primary"
           >
             u/HucknPluck&rsquo;s analysis on r/discgolf
-          </a>
+          </ExternalLink>
           , more accurate than the old &times;2 + 500 rule of thumb.
         </p>
       </header>
@@ -148,6 +153,16 @@ function App() {
           official PDGA/UDisc conversion.
         </p>
       </main>
+
+      <footer className="text-center text-xs text-muted-foreground">
+        <ExternalLink
+          href={REPO_URL}
+          className="justify-center underline underline-offset-2 hover:text-foreground"
+        >
+          <Code2 className="h-3.5 w-3.5" aria-hidden="true" />
+          Source Code
+        </ExternalLink>
+      </footer>
     </div>
   )
 }
