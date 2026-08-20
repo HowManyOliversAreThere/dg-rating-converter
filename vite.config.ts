@@ -12,9 +12,9 @@ export default defineConfig({
       registerType: 'autoUpdate',
       includeAssets: ['favicon.svg', 'apple-touch-icon.png'],
       manifest: {
-        name: 'Disc Golf Rating Converter',
-        short_name: 'DG Rating',
-        description: 'Convert disc golf ratings between UDisc and PDGA.',
+        name: 'DG Rating Converter',
+        short_name: 'DG Converter',
+        description: 'Convert disc golf round ratings between UDisc and PDGA.',
         theme_color: '#2f5233',
         background_color: '#f6f2e7',
         display: 'standalone',
